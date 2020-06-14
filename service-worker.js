@@ -3,7 +3,7 @@ var urlsToCache = [
     'index.html',
     'myclass.html',
     'opps.html',
-    'img/brand/wh.svg'
+    'img/wh.svg'
 ];
 console.log('loading sw');
 
