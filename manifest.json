@@ -5,9 +5,9 @@
   "lang": "en",
   "icons": [
     {
-      "src": "img/wh.svg",
+      "src": "img/wh.png",
       "type": "image/png",
-      "sizes": "144x144"
+      "sizes": "51x60"
     }
   ],
   "start_url": "./?v3&utm_source=web_app_manifest",
