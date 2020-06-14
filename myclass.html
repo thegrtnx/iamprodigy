@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
+	 <link rel="manifest" href="manifest.json">
 	<link rel="stylesheet" href="css/main.css">
 	<script data-ad-client="ca-pub-9235786948731761" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -257,6 +258,31 @@
 	<script src="js/mail-script.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
+	      <script>
+  if ('serviceWorker' in navigator) {
+    console.log("Will the service worker register?");
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(reg){
+        console.log("Yes, it did.");
+      }).catch(function(err) {
+        console.log("No it didn't. This happened: ", err)
+      });
+  }
+</script>
+<script src="service-worker.js">
+        // Service worker for Progressive Web App
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js', {
+            scope: '.' // THIS IS REQUIRED FOR RUNNING A PROGRESSIVE WEB APP FROM A NON_ROOT PATH
+        }).then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    }
+</script>
 	<script>
   var div = document.createElement('div');
   div.className = 'fb-customerchat';
